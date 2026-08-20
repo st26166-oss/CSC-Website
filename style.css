@@ -1,0 +1,47 @@
+body {
+    background-color:rgb(135, 211, 145); 
+}
+header {
+    background-color:rgb(87, 171, 95);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0;px;
+}
+
+h2 {
+    background-color:rgb(92, 192, 102);
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+    header {
+        background-color:rgb(87, 171, 95);
+    }
+    header h1 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        background-color:rgb(87, 171, 95);
+    }
+    header h1 {
+        font-size: 50px;
+    }
+}
