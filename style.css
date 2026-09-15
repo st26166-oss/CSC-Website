@@ -125,3 +125,8 @@ section button {
     display: block;
     margin: 10px auto;
 }
+.food-item img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+}
