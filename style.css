@@ -131,3 +131,14 @@ section button {
     object-fit: cover;
 }
 
+
+.food-page .food {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.food-page .food {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
