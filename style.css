@@ -6,6 +6,14 @@ body {
 }
 
 
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
 header {
     padding: 70px;
     text-align: left;
@@ -72,7 +80,7 @@ section h2 {
 
 .food-item {
     background-color: #f1f5e5;
-    width: 28%;
+    width: 400px;
     padding: 15px;
     text-align: center;
     border-radius: 15px;
@@ -80,7 +88,6 @@ section h2 {
 
 
 .food-item img {
-    width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
@@ -142,3 +149,54 @@ section button {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+
+
+/* Food page design */
+body.food-page {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #183b32;
+}
+
+body.food-page h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+body.food-page .food {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0 6px;
+}
+
+body.food-page .food-item {
+    background-color: #f0f4e4;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.food-page .food-item img {
+    width: 80%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+body.food-page .food-item h3 {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    color: #183b32;
+}
+
+body.food-page .food-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+}
+
