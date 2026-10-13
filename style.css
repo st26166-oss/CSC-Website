@@ -200,3 +200,53 @@ body.food-page .food-item p {
     line-height: 1.4;
 }
 
+```css
+/* Dessert page design */
+
+body.dessert-page {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #183b32;
+}
+
+body.dessert-page h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+body.dessert-page .dessert {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0 6px;
+}
+
+body.dessert-page .dessert-item {
+    background-color: #f0f4e4;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.dessert-page .dessert-item img {
+    width: 80%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+body.dessert-page .dessert-item h3 {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    color: #183b32;
+}
+
+body.dessert-page .dessert-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+}
