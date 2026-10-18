@@ -71,32 +71,62 @@ section h2 {
     font-size: 30px;
 }
 
+```css
+/* Food page design */
 
-.food {
-    display: flex;
-    justify-content: space-around;
+body.food-page {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #183b32;
 }
 
-
-.food-item {
-    background-color: #f1f5e5;
-    width: 400px;
-    padding: 15px;
+body.food-page h1 {
     text-align: center;
-    border-radius: 15px;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
+body.food-page .food {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0 6px;
+}
 
-.food-item img {
-    height: 150px;
+body.food-page .food-item {
+    background-color: #f0f4e4;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.food-page .food-item img {
+    width: 80%;
+    height: 225px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
 
+/* Hover effect for food images */
 
-.food-item p {
-    color: #666;
-    font-size: 14px;
+body.food-page .food-item img:hover {
+    transform: scale(1.05);
+}
+
+body.food-page .food-item h3 {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    color: #183b32;
+}
+
+body.food-page .food-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
 }
 
 
@@ -249,4 +279,87 @@ body.dessert-page .dessert-item p {
     font-size: 16px;
     color: #555;
     line-height: 1.4;
+}
+
+```css
+/* Drinks page design */
+
+body.drinks-page {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #183b32;
+}
+
+body.drinks-page h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+body.drinks-page .drinks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0 6px;
+}
+
+body.drinks-page .drinks-item {
+    background-color: #f0f4e4;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.drinks-page .drinks-item img {
+    width: 80%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+body.drinks-page .drinks-item h3 {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    color: #183b32;
+}
+
+body.drinks-page .drinks-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Hover effect for drinks images */
+
+body.drinks-page .drinks-item img {
+    transition: transform 0.3s ease;
+}
+
+body.drinks-page .drinks-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Default styles for mobile phones */
+body {
+  font-size: 16px;
+}
+
+/* For tablets and screens wider than 768px */
+@media screen and (min-width: 768px) {
+  /* Change layout from stack to side-by-side */
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* For desktops and screens wider than 1024px */
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1400px; /* Adjust this value as needed */    
+    margin: 0 auto; /* Keeps max-width if you want it centered on huge desktop screens, or remove margin entirely */
+  }
 }
