@@ -1,17 +1,18 @@
+
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background-color: #f2f6e8;
     color: #283b25;
+    font-size: 16px;
 }
-
 
 img {
     transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 header {
@@ -21,13 +22,14 @@ header {
 }
 
 header h1 {
-    font-family: Georgia;
+    font-family: Georgia, serif;
     font-size: 45px;
 }
 
 header p {
     color: #666;
     width: 400px;
+    max-width: 100%;
 }
 
 button {
@@ -36,8 +38,12 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #183b32;
+}
 
 nav {
     background-color: white;
@@ -47,6 +53,7 @@ nav {
 nav ul {
     list-style-type: none;
     text-align: center;
+    padding: 0;
 }
 
 nav li {
@@ -59,20 +66,31 @@ nav a {
     color: #333;
 }
 
-
 section {
     padding: 50px;
     background-color: white;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 section h2 {
     text-align: center;
-    font-family: Georgia;
+    font-family: Georgia, serif;
     font-size: 30px;
 }
 
-```css
-/* Food page design */
+section button {
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #dce8ca;
+}
+
+/* Food page */
 
 body.food-page {
     font-family: Arial, sans-serif;
@@ -100,17 +118,15 @@ body.food-page .food-item {
     padding: 18px;
     text-align: center;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 body.food-page .food-item img {
-    width: 80%;
-    height: 225px;
+    width: 100%;
+    height: 180px;
     object-fit: cover;
     border-radius: 12px;
-    transition: transform 0.3s ease;
 }
-
-/* Hover effect for food images */
 
 body.food-page .food-item img:hover {
     transform: scale(1.05);
@@ -120,6 +136,7 @@ body.food-page .food-item h3 {
     font-family: Arial, sans-serif;
     font-size: 23px;
     color: #183b32;
+    overflow-wrap: anywhere;
 }
 
 body.food-page .food-item p {
@@ -127,8 +144,38 @@ body.food-page .food-item p {
     font-size: 16px;
     color: #555;
     line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 
+/* Index page food cards */
+
+body:not(.food-page):not(.dessert-page):not(.drinks-page) .food {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body:not(.food-page):not(.dessert-page):not(.drinks-page) .food-item {
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body:not(.food-page):not(.dessert-page):not(.drinks-page) .food-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+body:not(.food-page):not(.dessert-page):not(.drinks-page) .food-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Last section on the home page */
 
 .last {
     display: flex;
@@ -137,101 +184,16 @@ body.food-page .food-item p {
     background-color: #edf3df;
 }
 
-
 .last div {
     width: 40%;
 }
-
 
 .last img {
     width: 40%;
     border-radius: 20px;
 }
 
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #dce8ca;
-}
-section {
-    text-align: center;
-}
-
-section button {
-    display: block;
-    margin: 10px auto;
-}
-.food-item img {
-    width: 300px;
-    height: 180px;
-    object-fit: cover;
-}
-
-
-.food-page .food {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-.food-page .food {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-
-/* Food page design */
-body.food-page {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #183b32;
-}
-
-body.food-page h1 {
-    text-align: center;
-    font-family: Georgia, serif;
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-body.food-page .food {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 25px;
-    padding: 0 6px;
-}
-
-body.food-page .food-item {
-    background-color: #f0f4e4;
-    border-radius: 18px;
-    padding: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-body.food-page .food-item img {
-    width: 80%;
-    height: 225px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-body.food-page .food-item h3 {
-    font-family: Arial, sans-serif;
-    font-size: 23px;
-    color: #183b32;
-}
-
-body.food-page .food-item p {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.4;
-}
-
-```css
-/* Dessert page design */
+/* Dessert page */
 
 body.dessert-page {
     font-family: Arial, sans-serif;
@@ -259,6 +221,7 @@ body.dessert-page .dessert-item {
     padding: 18px;
     text-align: center;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 body.dessert-page .dessert-item img {
@@ -281,8 +244,7 @@ body.dessert-page .dessert-item p {
     line-height: 1.4;
 }
 
-```css
-/* Drinks page design */
+/* Drinks page */
 
 body.drinks-page {
     font-family: Arial, sans-serif;
@@ -310,6 +272,8 @@ body.drinks-page .drinks-item {
     padding: 18px;
     text-align: center;
     box-sizing: border-box;
+    min-width: 0;
+    transition: transform 0.3s ease;
 }
 
 body.drinks-page .drinks-item img {
@@ -317,6 +281,10 @@ body.drinks-page .drinks-item img {
     height: 225px;
     object-fit: cover;
     border-radius: 12px;
+}
+
+body.drinks-page .drinks-item img:hover {
+    transform: scale(1.05);
 }
 
 body.drinks-page .drinks-item h3 {
@@ -332,34 +300,346 @@ body.drinks-page .drinks-item p {
     line-height: 1.4;
 }
 
-/* Hover effect for drinks images */
+/* Location section */
 
-body.drinks-page .drinks-item img {
-    transition: transform 0.3s ease;
+.location {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-body.drinks-page .drinks-item img:hover {
-    transform: scale(1.05);
+.location h2 {
+    color: #183b32;
 }
 
-/* Default styles for mobile phones */
-body {
-  font-size: 16px;
+.location iframe {
+    max-width: 100%;
 }
 
-/* For tablets and screens wider than 768px */
-@media screen and (min-width: 768px) {
-  /* Change layout from stack to side-by-side */
-  .container {
+/* Opening Hours and Book a Table */
+
+.contact-boxes {
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 30px;
+    background-color: white;
 }
 
-/* For desktops and screens wider than 1024px */
-@media screen and (min-width: 1024px) {
-  body {
-    max-width: 1400px; /* Adjust this value as needed */    
-    margin: 0 auto; /* Keeps max-width if you want it centered on huge desktop screens, or remove margin entirely */
-  }
+.contact-boxes .booking-section,
+.contact-boxes .opening-hours {
+    flex: 1;
+    max-width: 450px;
+    min-width: 0;
+    margin: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    text-align: center;
 }
+
+.contact-boxes h2 {
+    color: #183b32;
+    margin-top: 0;
+}
+
+.contact-boxes p {
+    color: #283b25;
+    line-height: 1.6;
+}
+
+.contact-boxes input,
+.contact-boxes select,
+.contact-boxes textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #9aaa87;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contact-boxes button {
+    cursor: pointer;
+}
+
+.contact-boxes button:hover {
+    background-color: #183b32;
+}
+
+.contact-boxes .confirmation {
+    margin-top: 15px;
+    color: #183b32;
+    font-weight: bold;
+}
+
+/* Contact form */
+
+.contact-section {
+    background-color: white;
+    padding: 35px 20px;
+}
+
+.contact-section h2 {
+    color: #183b32;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 280px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 5px 0 12px;
+    border: 1px solid #9aaa87;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.contact-section textarea {
+    height: 120px;
+}
+
+.contact-section button {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Tables, if used */
+
+table {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #e8f0d8;
+    color: #183b32;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #dce8ca;
+    text-align: center;
+}
+
+/* Tablet screens */
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Desktop screens */
+
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Phone screens */
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        width: auto;
+    }
+
+    nav li {
+        margin: 8px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    /* Home page food cards */
+
+    body:not(.food-page):not(.dessert-page):not(.drinks-page) .food {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    body:not(.food-page):not(.dessert-page):not(.drinks-page) .food-item img {
+        height: 200px;
+    }
+
+    /* Food page */
+
+    body.food-page .food {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0;
+    }
+
+    body.food-page .food-item {
+        padding: 10px;
+    }
+
+    body.food-page .food-item img {
+        width: 100%;
+        height: 160px;
+    }
+
+    body.food-page .food-item h3 {
+        font-size: 18px;
+    }
+
+    body.food-page .food-item p {
+        font-size: 14px;
+    }
+
+    /* Dessert page */
+
+    body.dessert-page .dessert {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0;
+    }
+
+    body.dessert-page .dessert-item {
+        padding: 10px;
+    }
+
+    body.dessert-page .dessert-item img {
+        width: 100%;
+        height: 160px;
+    }
+
+    body.dessert-page .dessert-item h3 {
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    body.dessert-page .dessert-item p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Drinks page */
+
+    body.drinks-page .drinks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0;
+    }
+
+    body.drinks-page .drinks-item {
+        padding: 10px;
+    }
+
+    body.drinks-page .drinks-item img {
+        width: 100%;
+        height: 160px;
+    }
+
+    body.drinks-page .drinks-item h3 {
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    body.drinks-page .drinks-item p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Home page last section */
+
+    .last {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .last div {
+        width: 100%;
+    }
+
+    .last img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Booking and opening hours stack on phones */
+
+    .contact-boxes {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .contact-boxes .booking-section,
+    .contact-boxes .opening-hours {
+        width: 100%;
+        max-width: 450px;
+        padding: 20px 10px;
+    }
+}
+
+
+/* Put Opening Hours and Book a Table side by side */
+.contact-boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    background-color: white;
+    padding: 20px;
+}
+
+.contact-boxes .opening-hours,
+.contact-boxes .booking-section {
+    flex: 1;
+    width: 50%;
+    max-width: 500px;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Make the opening hours table fit its section */
+.contact-boxes .opening-hours table {
+    width: 100%;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-boxes .opening-hours,
+    .contact-boxes .booking-section {
+        width: 100%;
+    }
+}
+
