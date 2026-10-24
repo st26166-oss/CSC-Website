@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -88,10 +87,31 @@ section button {
     margin: 10px auto;
 }
 
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #47723a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+    border: none;
+}
+
+.view-button:hover {
+    background-color: #365b2c;
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #dce8ca;
+}
+
+.location iframe {
+    width: 80%;
+    height: 250px;
+    border: 0;
 }
 
 /* Food page */
@@ -646,4 +666,3 @@ th, td {
         width: 100%;
     }
 }
-
